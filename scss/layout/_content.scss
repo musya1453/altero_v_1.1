@@ -176,3 +176,156 @@ h2 {
     }
   }
 }
+
+.section-reviews {
+  padding: 75px 0 115px;
+
+  .container {
+    position: relative;
+
+    &:before {
+      @include pseudo-block($top: 0, $right: 0);
+      width: 382px;
+      height: 371px;
+      background: image-url('tmp/vector-img-3.png');
+    }
+  }
+
+  .slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    @include translateY(-50%);
+    @include oneline-sprite-box($icons, arr-ri);
+    border: none;
+    @include text-hide();
+  }
+
+  .slick-prev {
+    left: -30px;
+  }
+
+  .slick-next {
+    right: -30px;
+    @include transform(translateY(-50%) rotate(180deg));
+  }
+
+  h2 {
+    margin: 0 0 50px;
+  }
+
+  .slick-slider {
+    width: 860px;
+    font-size: 22px;
+    position: relative;
+
+    &:before {
+      @include pseudo-block($top: 0, $left: 0);
+      @include oneline-sprite-box($icons, quo);
+    }
+  }
+
+  .text {
+    margin-bottom: 30px;
+  }
+
+  .author {
+    @include clearfix();
+
+    .img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px;
+    }
+
+    .info {
+      overflow: hidden;
+      font-size: 18px;
+      color: #797979;
+      display: inline-block;
+      vertical-align: middle;
+
+      strong {
+        display: block;
+        color: #000000;
+        font-size: 30px;
+        font-family: $bold;
+      }
+    }
+  }
+}
+
+.section-form {
+  background: image-url('bg/bg-2.jpg');
+  padding: 90px 0 180px;
+  @include background-size(cover);
+  color: #fff;
+  text-align: center;
+
+  .form {
+    width: 515px;
+    border: 7px solid #fff;
+    display: inline-block;
+    padding: 60px 70px;
+    font-size: 18px;
+  }
+
+  .title {
+    display: block;
+    font-size: 33px;
+    text-transform: uppercase;
+    font-family: $bold;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .sub-title {
+    color: #0092e6;
+    display: inline-block;
+    padding: 5px 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    background: #d0e7fe;
+    font-family: $bold;
+    margin-bottom: 40px;
+  }
+
+  .form-type-text {
+    margin-bottom: 35px;
+  }
+
+  .form-text {
+    padding: 7px 0;
+    color: #fff;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    @include input-placeholder(#fff)
+  }
+}
+
+.btn-wrap.style-a {
+  text-align: left;
+  margin-top: 60px;
+
+  .btn {
+    border: 3px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 12px 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @include box-shadow(5px 5px 0 0px #fff);
+    @include transition(all .3s);
+
+    &:hover {
+      background: #fff;
+      color: #0092e6;
+      @include box-shadow(0 0 0 0px #fff);
+    }
+  }
+}
