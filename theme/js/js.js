@@ -1,26 +1,18 @@
 (function ($) {
 
-  if (typeof Drupal != 'undefined') {
-    Drupal.behaviors.wcportalMobileTheme = {
-      attach: function (context, settings) {
-        init();
-      },
+  $(window).load(function () {
+    var $btns = $('.section-faq ul li .title'),
+      $elems = $('.section-faq ul li');
 
-      completedCallback: function () {
-        // Do nothing. But it's here in case other modules/themes want to override it.
-      }
-    }
-  }
+    $btns.on('click touch', function (e) {
+      e.preventDefault();
 
-  $(function () {
-    if (typeof Drupal == 'undefined') {
-      init();
-    }
-  });
+      var $parent = $(this).parent();
 
-  function init() {
-
-  }
+      $elems.removeClass('active');
+      $parent.addClass('active');
+    })
+  })
 
 })(jQuery);
 
