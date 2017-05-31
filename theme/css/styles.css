@@ -432,7 +432,7 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, strong {
   font-weight: normal;
 }
 
@@ -529,11 +529,6 @@ a, input, button {
   background: #fff;
   z-index: 1;
 }
-@media (min-width: 1380px) {
-  .section-top .b-action {
-    padding: 110px 146px 136px;
-  }
-}
 .section-top .b-action .bg-price {
   font-size: 230px;
   color: #d0e7fe;
@@ -570,7 +565,7 @@ a, input, button {
 @media (min-width: 1380px) {
   .section-top .b-action ul li {
     font-size: 36px;
-    margin-right: 40px;
+    margin-right: 35px;
   }
 }
 .section-top .b-action ul li:before {
@@ -711,26 +706,38 @@ h2 {
   line-height: 0;
 }
 .section-reviews .slick-prev {
-  left: -30px;
+  left: -10px;
+}
+@media (min-width: 1380px) {
+  .section-reviews .slick-prev {
+    left: -30px;
+  }
 }
 .section-reviews .slick-next {
-  right: -30px;
+  right: 0;
   -moz-transform: translateY(-50%) rotate(180deg);
   -ms-transform: translateY(-50%) rotate(180deg);
   -webkit-transform: translateY(-50%) rotate(180deg);
   transform: translateY(-50%) rotate(180deg);
 }
+@media (min-width: 1380px) {
+  .section-reviews .slick-next {
+    right: -30px;
+  }
+}
 .section-reviews h2 {
   margin: 0 0 50px;
 }
 .section-reviews .slick-slider {
-  width: 695px;
+  width: 685px;
   font-size: 22px;
   position: relative;
+  margin-left: 20px;
 }
 @media (min-width: 1380px) {
   .section-reviews .slick-slider {
     width: 860px;
+    margin-left: 0;
   }
 }
 .section-reviews .slick-slider:before {

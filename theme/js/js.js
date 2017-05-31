@@ -9,8 +9,12 @@
 
       var $parent = $(this).parent();
 
-      $elems.removeClass('active');
-      $parent.addClass('active');
+      if($parent.hasClass('active')){
+        $parent.removeClass('active');
+      }else{
+        $elems.removeClass('active');
+        $parent.addClass('active');
+      }
     })
   })
 
